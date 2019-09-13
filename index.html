@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Doll's Paradise</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link rel="stylesheet" href="css/simplelightbox.min.css">
+</head>
+<body id="home">
+    <header class="header">
+      <div class="container container--header">
+          <h1 class="logo">Doll's Paradise</h1>
+          <ul class="nav" id="nav">
+              <li><a class="nav__link active" href="#home">Home</a></li>
+              <li><a class="nav__link" href="#about">About</a></li>
+              <li><a class="nav__link" href="#gallery">Gallery</a></li>
+              <li><a class="nav__link" href="#contacts">Contacts</a></li>
+          </ul>
+          <button class="nav__menu" id="nav__menu">
+              <span class="nav__item"></span>
+          </button>
+      </div>
+    </header>
+
+    <!-- Showcase -->
+<section class="section-a">
+    <div class="container container--a">
+        <div class="wrap-a">
+            <h1 class="title">Sweet Harmony of Beauty and Art</h1>
+            <p class="text">A collection of most beautiful, cool, stylish and awesome handmade dolls!
+                 We have nice variety of exemplars for all tastes!
+                </p>
+             <a href="#" class="btn">Read More</a>
+        </div>
+        <img class="section-a__image" src="img/doll_15.jpg" alt="art">
+    </div>
+</section>
+
+<!-- Overlay Text -->
+<section class="section-b" class="parallax-window" data-parallax="scroll" data-image-src='img/bg_1.jpg'>
+    <div class="overlay">
+        <div class="section-b__inner">
+            <h3 class="section-b__suptitle">play &amp; enjoy</h3>
+            <h2 class="section-b__title">Fantastic quality, style and value</h2>
+            <p class="section-b__text">Treat your doll to the latest make over or pick a brand new one!
+            Our magic recipe is playful design. Shop online for quick delivery and irresistible prices on dolls and accessories.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery -->
+<section class="section-c">
+    <div class="gallery">
+        <a href="img/doll_7.jpg" class="gallery__item"><img src="img/doll_7.jpg" alt="doll"></a>                   
+        <a href="img/doll_12.jpg" class="gallery__item"><img src="img/doll_12.jpg" alt="doll"></a>                   
+        <a href="img/doll_6.jpg" class="gallery__item"><img src="img/doll_6.jpg" alt="doll"></a>                   
+        <a href="img/doll_13.jpg" class="gallery__item"><img src="img/doll_13.jpg" alt="doll"></a>                   
+        <a href="img/doll_11.jpg" class="gallery__item"><img src="img/doll_11.jpg" alt="doll"></a> 
+        <a href="img/doll_14.jpg" class="gallery__item"><img src="img/doll_14.jpg" alt="doll"></a>                  
+        <a href="img/doll_3.jpg" class="gallery__item"><img src="img/doll_3.jpg" alt="doll"></a>                   
+                            
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="section-footer">
+<div class="container container--footer">
+    <div class="socials">
+        <h3 class="footer__title">Follow us on social media</h3>
+        <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="http://facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="http://youtube.com"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div >
+        <h3 class="footer__title">Company Info</h3>
+        <ul>
+            <li><a class="footer__link" href="#">All Products</a></li>
+            <li><a class="footer__link" href="#">About Us</a></li>
+            <li><a class="footer__link" href="#">Privacy Policy</a></li>
+            <li><a class="footer__link" href="#">Terms of Service</a></li>
+        </ul>
+    </div>
+    <div class="blog">
+        <h3 class="footer__title">Blog Posts</h3>
+        <ul>
+            <li><a class="footer__link" href="#">Create a unique doll </a></li>
+            <li><a class="footer__link" href="#">Enjoy low warehouse prices </a></li>
+            <li><a class="footer__link" href="#">Free delivery on orders</a></li>
+            <li><a class="footer__link" href="#">Choose from a wide range</a></li>
+        </ul>
+    </div>
+    <div>
+        <h3 class="footer__title">Subscribe</h3>
+        <p class="subscribe-text">Subscribe to our newsletter</p>
+        <form name="email-form" method="POST" data-netlify="true">
+            <div class="email-form">
+                <span class="form-control-wrap">
+                    <input type="email" name="email" id="email" class="form-control" 
+                    placeholder="Email">
+                </span>
+                <button type="submit" class="form-control submit">
+                        <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+</footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/simple-lightbox.min.js"></script>
+  <script>
+      $(function () {
+          const $gallery = $('.gallery a').simpleLightbox();
+          
+      });
+
+      $('#nav__menu').on('click', function(event){
+            event.preventDefault();
+            $('#nav').toggleClass('active');
+      });
+
+      $('.nav__link').on('click', function(){
+            $('.nav__link').removeClass('active');
+            $(this).addClass('active');
+      });
+  </script>
+
+
+</body>
+</html>
